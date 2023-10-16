@@ -17,9 +17,11 @@ function DownloadButton({ nim, setFound, isTracerStudyFilled, tagihanLunas }) {
           // Ganti URL ini dengan URL server Flask Anda yang meng-handle unduhan PDF
           window.location.href = `http://localhost:8001/download?nim=${nim}`;
           Swal.fire({
-            icon: 'success',
-            title: 'Unduhan Berhasil',
-            text: `Bukti Registrasi Wisuda dengan NIM: ${nim} berhasil diunduh.`,
+            title: `BUKTI REGISTRASI WISUDA DENGAN NIM: ${nim} BERHASIL DIUNDUH!`,
+            text: 'PESERTA WISUDA GELOMBANG I TAHUN AKADEMIK 2023/2024',
+            imageUrl: 'logo_wisuda.png',
+            imageHeight: 100,
+            imageAlt: 'Logo',
             confirmButtonColor: '#0d6efd'
           });
         }
@@ -60,9 +62,11 @@ function App() {
   const handleSearchClick = () => {
     if (!nim) {
       Swal.fire({
-        icon: 'info',
-        title: 'NIM tidak boleh kosong!',
-        text: 'Masukkan NIM terlebih dahulu',
+        title: 'NIM TIDAK BOLEH KOSONG!',
+        text: 'PESERTA WISUDA GELOMBANG I TAHUN AKADEMIK 2023/2024',
+        imageUrl: 'logo_wisuda.png',
+        imageHeight: 100,
+        imageAlt: 'Logo',
         confirmButtonColor: '#0d6efd'
       });
       return;
@@ -75,9 +79,11 @@ function App() {
           // console.log("Mengisi Tracer Study:", response.data.mahasiswa[0]['Mengisi Tracer Study'])
           if (response.data.mahasiswa[0]['Mengisi Tracer Study'] === "#N/A") {
             Swal.fire({
-              icon: 'info',
-              title: 'Anda belum mengisi Tracer Study!',
-              text: 'Silakan mengisi Tracer Study terlebih dahulu!',
+              title: 'ANDA BELUM MENGISI TRACER STUDY!',
+              text: 'PESERTA WISUDA GELOMBANG I TAHUN AKADEMIK 2023/2024',
+              imageUrl: 'logo_wisuda.png',
+              imageHeight: 100,
+              imageAlt: 'Logo',
               confirmButtonColor: '#0d6efd'
             });
           }
@@ -87,8 +93,11 @@ function App() {
           setFound(false);
           setMahasiswa(null); // Reset data mahasiswa jika tidak ditemukan
           Swal.fire({
-            icon: 'error',
-            title: 'NIM tidak ditemukan!',
+            title: 'NIM TIDAK TERDAFTAR!',
+            text: 'PESERTA WISUDA GELOMBANG I TAHUN AKADEMIK 2023/2024',
+            imageUrl: 'logo_wisuda.png',
+            imageHeight: 100,
+            imageAlt: 'Logo',
             confirmButtonColor: '#0d6efd'
           });
 
@@ -99,9 +108,11 @@ function App() {
         setFound(false);
         setMahasiswa(null); // Reset data mahasiswa jika terjadi kesalahan
         Swal.fire({
-          icon: 'error',
-          title: 'Error',
-          text: 'Terjadi kesalahan saat mengambil data',
+          title: 'TERJADI KESALAHAN SAAT MENGAMBIL DATA!',
+          text: 'PESERTA WISUDA GELOMBANG I TAHUN AKADEMIK 2023/2024',
+          imageUrl: 'logo_wisuda.png',
+          imageHeight: 100,
+          imageAlt: 'Logo',
           confirmButtonColor: '#0d6efd'
         });
       });
