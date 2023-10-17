@@ -193,7 +193,7 @@ function App() {
                       </tr>
                       <tr>
                         <th style={{ textAlign: 'left' }} scope="col">Sesi Wisuda</th>
-                        <th style={{ textAlign: 'left' }} scope="col">: Sesi 1</th>
+                        <th style={{ textAlign: 'left' }} scope="col">: {mahasiswa['Sesi Wisuda']}</th>
                       </tr>
                       <tr>
                         <th style={{ textAlign: 'left' }} scope="col">Lokasi Wisuda</th>
@@ -201,7 +201,7 @@ function App() {
                       </tr>
                       <tr>
                         <th style={{ textAlign: 'left' }} scope="col">Waktu Pelaksanaan</th>
-                        <th style={{ textAlign: 'left', minWidth: '230px' }} scope="col">: 11 November 2023</th>
+                        <th style={{ textAlign: 'left', minWidth: '230px' }} scope="col">: {mahasiswa['Sesi Wisuda'] === "Sesi 1" ? "Sabtu, 11 November 2023, 08.00 - 11.00": "Sabtu, 11 November 2023, 14.00 s.d. Selesai" }</th>
                       </tr>
                       <tr>
                         <th style={{ textAlign: 'left' }} scope="col">Status Tagihan Wisuda</th>
@@ -209,7 +209,7 @@ function App() {
                       </tr>
                       <tr>
                         <th style={{ textAlign: 'left' }} scope="col">Tanggal Bayar</th>
-                        <th style={{ textAlign: 'left', minWidth: '230px' }} scope="col">: {mahasiswa['Status Tagihan Wisuda'] === "Lunas" ? (<span> {moment.utc(mahasiswa['Waktu Bayar']).locale('id').format('DD MMMM YYYY HH:mm:ss')}</span>) : ""}  </th>
+                        <th style={{ textAlign: 'left', minWidth: '230px' }} scope="col">: {mahasiswa['Status Tagihan Wisuda'] === "Lunas" ? (<span> {moment.utc(mahasiswa['Waktu Bayar']).locale('id').format('DD MMMM YYYY HH:mm')}</span>) : ""}  </th>
                       </tr>
                       <tr>
                         <th style={{ textAlign: 'left' }} scope="col">Mengisi Tracer Study</th>
