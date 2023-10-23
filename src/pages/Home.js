@@ -200,6 +200,10 @@ function App() {
                         <th style={{ textAlign: 'left' }} scope="col">: Sasana Budaya Ganesha (SABUGA)</th>
                       </tr>
                       <tr>
+                        <th style={{ textAlign: 'left' }} scope="col">Waktu Gladi Resik</th>
+                        <th style={{ textAlign: 'left', minWidth: '230px' }} scope="col">: Jumat, 10 November 2023, 08.00 s.d. Selesai</th>
+                      </tr>
+                      <tr>
                         <th style={{ textAlign: 'left' }} scope="col">Waktu Pelaksanaan</th>
                         <th style={{ textAlign: 'left', minWidth: '230px' }} scope="col">: {mahasiswa['Sesi Wisuda'] === "Sesi 1" ? "Sabtu, 11 November 2023, 08.00 - 11.00": "Sabtu, 11 November 2023, 14.00 s.d. Selesai" }</th>
                       </tr>
