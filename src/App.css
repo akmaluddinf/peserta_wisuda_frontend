@@ -2,21 +2,47 @@
   text-align: center;
 }
 
-body {
+/* body { */
   /* background-color: #f8f9fa; */
   /* CSS untuk menambahkan background image */
-    background-image: url('../public/bg30.png');
-    /* background-image: url('../public/bg2.jpg'); */
-    /* Ganti 'background.jpg' dengan path atau URL gambar latar belakang Anda */
+    /* background-image: url('../public/bg30.png'); */
+    /* background-image: url('../public/bg1.jpg');
     background-size: cover;
-    /* Untuk memastikan gambar latar belakang mencakup seluruh halaman */
     background-repeat: no-repeat;
-    /* Agar gambar latar belakang tidak diulang */
-    background-attachment: fixed; /* Opsional: agar gambar tetap saat scrolling */
-    background-position: center;
-    background-color: #6CAFFF;
+    background-attachment: fixed;
+    background-position: center; */
+    /* background-color: #d4e8ff; */
+/* } */
+
+.bg-video {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 93vh;
+  /* z-index:-100; */
 }
 
+.bg-video2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 100%;
+}
+
+.font-color-title{
+  color: white;
+}
+
+@media screen and (max-width: 480px) {
+  .bg-video {
+    display: none;
+  }
+  .bg-video2 {
+    display: block;
+  }
+}
 
 /* Membuat footer selalu berada di bawah halaman */
 footer {
